@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>deck.gl w/ Google Maps example</title>
+    <style>
+      body {
+        font-family: monospace;
+        font-size: 100%;
+        margin: 0;
+      }
+
+      .map-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .info {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        max-width: 320px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 0.5em;
+        padding: 0.75em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+    <script type="module" src="./app.js"></script>
+
+    <div class="info">
+      <h1>
+        repro: rendering stops at certain zoom-levels for power-of-two map sizes
+      </h1>
+
+      <p>
+        The buttons below will resize the map-container, update the zoom-level
+        of the map and trigger a resize-event for the map. The default-button
+        will reset the map to 100% width.
+      </p>
+      <div class="buttons">
+        <button data-map-size="default">default</button>
+        <button data-map-size="512" data-zoom="1">512px / zoom 1</button>
+        <button data-map-size="1024" data-zoom="2">1024px / zoom 2</button>
+        <button data-map-size="2048" data-zoom="3">2048px / zoom 3</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "deckgl-power-of-two-width-repro",
+  "author": "Martin Schuhfuss <schuhfuss@ubilabs.com>",
+  "scripts": {
+    "start": "vite"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@deck.gl/google-maps": "^8.7.9",
+    "@deck.gl/layers": "^8.7.9"
+  }
+}
